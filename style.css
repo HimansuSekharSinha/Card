@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+}
+body{
+    background: #333;
+    color: white;
+    font-family: 'Goldman', cursive;
+}
+.main_div{
+    width: 100%;
+    max-width: 1450px;
+    margin: 25px auto;
+}
+.main_div h1{
+    text-align: center;
+    font-weight: 550;
+}
+.main_div .pannel{
+    list-style-type: none;
+    margin: 30px;
+}
+.main_div .pannel li{
+    width: 25%;
+    float: left;
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+.main_div .pannel li div{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50% 0;
+}
+.main_div .pannel li .back{
+    transform: rotateY(90deg);
+}
+.main_div .pannel li .front{
+    position: absolute;
+}
+@keyframes twi {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(90deg);
+    }
+}
+.main_div .pannel li:hover div.front{
+    animation: twi 0.4s linear forwards;
+}
+.main_div .pannel li:hover div.back{
+    animation: twi 0.4s 0.4s linear reverse forwards;
+}
